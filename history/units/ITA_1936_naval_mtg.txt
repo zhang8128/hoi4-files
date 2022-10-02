@@ -329,7 +329,7 @@ instant_effect = {
 			} 
 			name = "RN Conte di Cavour"
 			requested_factories = 2
-			progress = 0.20 
+			progress = 0.70 
 			amount = 1 
 		} 
 
@@ -342,7 +342,7 @@ instant_effect = {
 			} 
 			name = "RN Giulio Cesare"
 			requested_factories = 2
-			progress = 0.20 
+			progress = 0.70 
 			amount = 1 
 		} 
 		# BB: "Littorio"

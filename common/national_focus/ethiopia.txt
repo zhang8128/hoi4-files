@@ -3237,6 +3237,7 @@ focus_tree = {
 	 					is_league_of_nations_member = yes 
 	 					is_subject = no # Embargo managed by overlord
 	 					NOT = { tag = ROOT }
+	 					NOT = { tag =  ITA }
 	 				}
 	 				country_event = {
 	 					id = BBA_italo_ethiopian_war_events.10
@@ -4085,7 +4086,7 @@ focus_tree = {
 			OR = {
 				AND = {
 					is_government_in_exile = no 
-					all_owned_state = { is_controlled_by_ROOT_or_ally = yes }
+					any_owned_state = { is_controlled_by_ROOT_or_ally = yes }
 				}
 				AND = {
 					is_government_in_exile = yes

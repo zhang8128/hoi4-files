@@ -58,28 +58,8 @@ debug_decisions = {
 		}
 
 		available = {
-			set_temp_variable = { current_fighters = num_equipment@small_plane_airframe }
-			check_variable = { current_fighters = 300 compare = greater_than_or_equals }
-			#has_character = ITA_italo_balbo
-			#if = {
-			#	limit = {
-			#		has_character = ITA_italo_balbo
-			#	}
-			#	ITA_italo_balbo = {
-			#		has_character_flag = ITA_cw_character_fascist_side_flag
-			#	}
-			#	ITA_italo_balbo = {
-			#		has_unit_leader_flag = ITA_cw_unit_leader_fascist_side_flag
-			#	}
-			#}
-			#any_unit_leader = {
-			#	has_unit_leader_flag = ITA_mytest_flag
-			#	log = "I am [THIS.GetName]"
-			#}
-
-			has_character = ITA_luigi_longo
-			has_character = ITA_giuseppe_borea
-			has_character = ITA_amadeo_bordiga
+			has_country_flag = ITA_defeat_in_ethiopia_flag 
+			has_country_flag = ITA_victory_in_ethiopia_flag
 		}
 
 		complete_effect = {
@@ -323,24 +303,23 @@ ITA_missiolinis = {
 		days_mission_timeout = ETH.ETH_hold_the_north_time
 
 		cancel_effect = {
-			#Prepare next mission
-			#if = {
-			#	limit = {
-			#		NOT = { has_active_mission = ITA_conquer_the_south_mission }
-			#		ITA_missiolinis_system_available = yes
-			#	}
-			#	ITA_missiolinis_manage_next_mission = yes
-			#}
 			if = { #MISSION SUCCEEDED
 				limit = {
-					count_triggers = {
-						amount = 2
-						# 841 = { is_controlled_by = ROOT }
-						# 842 = { is_controlled_by = ROOT }
-						# 843 = { is_controlled_by = ROOT }
-						controls_province = 1984
-						controls_province = 2072
-						controls_province = 5097
+					OR = {
+						has_country_flag = ITA_victory_in_ethiopia_flag
+						count_triggers = {
+							amount = 2
+							# 841 = { is_controlled_by = ROOT }
+							# 842 = { is_controlled_by = ROOT }
+							# 843 = { is_controlled_by = ROOT }
+							controls_province = 1984
+							controls_province = 2072
+							controls_province = 5097
+						}
+						hidden_trigger = {
+							NOT = { has_global_flag = second_italo_ethiopian_war_flag }
+							hidden_trigger = { NOT = { has_country_flag = ITA_defeat_in_ethiopia_flag } }
+						}
 					}
 				}
 				country_event = { id = BBA_italy_missiolinis.03_north hours = 1 }
@@ -469,24 +448,23 @@ ITA_missiolinis = {
 		days_mission_timeout = ETH.ETH_hold_the_south_time
 
 		cancel_effect = {
-			#Prepare next mission
-			#if = {
-			#	limit = {
-			#		NOT = { has_active_mission = ITA_conquer_the_south_mission }
-			#		ITA_missiolinis_system_available = yes
-			#	}
-			#	ITA_missiolinis_manage_next_mission = yes
-			#}
 			if = { #MISSION SUCCEEDED
 				limit = {
-					count_triggers = {
-						amount = 2
-						#835 = { is_controlled_by = ROOT }
-						#836 = { is_controlled_by = ROOT }
-						#837 = { is_controlled_by = ROOT }
-						controls_province = 12812
-						controls_province = 10775
-						controls_province = 13247
+					OR = {
+						has_country_flag = ITA_victory_in_ethiopia_flag
+						count_triggers = {
+							amount = 2
+							# 835 = { is_controlled_by = ROOT }
+							# 836 = { is_controlled_by = ROOT }
+							# 837 = { is_controlled_by = ROOT }
+							controls_province = 12812
+							controls_province = 10775
+							controls_province = 13247
+						}
+						hidden_trigger = {
+							NOT = { has_global_flag = second_italo_ethiopian_war_flag }
+							hidden_trigger = { NOT = { has_country_flag = ITA_defeat_in_ethiopia_flag } }
+						}
 					}
 				}
 				country_event = { id = BBA_italy_missiolinis.05_south hours = 1 }
@@ -634,7 +612,7 @@ ITA_missiolinis = {
 				tooltip = ITA_pacify_ethiopia_goal_tt
 				all_of_scopes = {
 					array = ITA_initial_ethiopian_states
-					compliance > 70 #WARNING THIS VALUE NEEDS TO MATCH THE ONE IN EVENT TRIGGER
+					compliance > 60 #WARNING THIS VALUE NEEDS TO MATCH THE ONE IN EVENT TRIGGER
 				}
 			}
 		}
@@ -7148,8 +7126,7 @@ political_actions = {
 		}
 
 		complete_effect = {
-			ITA_promote_umberto_to_country_leader = yes
-			retire_character = ITA_vittorio_emanuele_iii
+			ITA_promote_umberto_to_country_leader = yes #This effect also retires Vittorio
 		}
 	}
 }

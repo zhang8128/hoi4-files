@@ -598,7 +598,13 @@ SOV_decision_pp_spending = {
 		original_tag = SOV
 	}
 	enable = {
-		has_manpower < 100000
+		OR = {
+			has_manpower < 100000
+			AND = {
+				has_war = yes
+				has_manpower < 1000000
+			}
+		}
 		has_political_power < 200
 		OR = {
 			has_idea = volunteer_only
@@ -1027,6 +1033,15 @@ SOV_scorched_earth_german_front_baltics = {
 		NOT = {
 			has_country_flag = SOV_barbarossa_scorched_earth_delay #a 45 day delay at the start of the war before Soviets start doing this
 		}
+		NOT = { # please don't spend PP on blowing up your own stuff when you need it for manpower
+			has_manpower < 1000000
+			has_political_power < 200
+			OR = {
+				has_idea = volunteer_only
+				has_idea = limited_conscription
+				has_idea = extensive_conscription
+			}
+		}
 		count_triggers = {
 			amount = 4 #if 4 baltic states are owned by an enemy, burn the rest of the Baltics
 			814 = { CONTROLLER = { has_war_with = SOV } }
@@ -1082,6 +1097,15 @@ SOV_scorched_earth_german_front_Poland = {
 		NOT = {
 			has_country_flag = SOV_barbarossa_scorched_earth_delay #a 45 day delay at the start of the war before Soviets start doing this
 		}
+		NOT = { # please don't spend PP on blowing up your own stuff when you need it for manpower
+			has_manpower < 1000000
+			has_political_power < 200
+			OR = {
+				has_idea = volunteer_only
+				has_idea = limited_conscription
+				has_idea = extensive_conscription
+			}
+		}
 		count_triggers = {
 			amount = 2 #if 2 states are owned by an enemy, burn the rest of the area
 			784 = { CONTROLLER = { has_war_with = SOV } }
@@ -1126,6 +1150,15 @@ SOV_scorched_earth_german_front_north = {
 		NOT = {
 			has_country_flag = SOV_barbarossa_scorched_earth_delay #a 45 day delay at the start of the war before Soviets start doing this
 		}
+		NOT = { # please don't spend PP on blowing up your own stuff when you need it for manpower
+			has_manpower < 1000000
+			has_political_power < 200
+			OR = {
+				has_idea = volunteer_only
+				has_idea = limited_conscription
+				has_idea = extensive_conscription
+			}
+		}
 		count_triggers = {
 			amount = 2 #if 2 states are owned by an enemy, burn the rest of the area
 			208 = { CONTROLLER = { has_war_with = SOV } }
@@ -1168,6 +1201,15 @@ SOV_scorched_earth_german_front_center = {
 		has_war_with = GER
 		NOT = {
 			has_country_flag = SOV_barbarossa_scorched_earth_delay #a 45 day delay at the start of the war before Soviets start doing this
+		}
+		NOT = { # please don't spend PP on blowing up your own stuff when you need it for manpower
+			has_manpower < 1000000
+			has_political_power < 200
+			OR = {
+				has_idea = volunteer_only
+				has_idea = limited_conscription
+				has_idea = extensive_conscription
+			}
 		}
 		count_triggers = {
 			amount = 4 #if 4 states are owned by an enemy, burn the rest of the area
@@ -1222,6 +1264,15 @@ SOV_scorched_earth_german_front_moscow = {
 		NOT = {
 			has_country_flag = SOV_barbarossa_scorched_earth_delay #a 45 day delay at the start of the war before Soviets start doing this
 		}
+		NOT = { # please don't spend PP on blowing up your own stuff when you need it for manpower
+			has_manpower < 1000000
+			has_political_power < 200
+			OR = {
+				has_idea = volunteer_only
+				has_idea = limited_conscription
+				has_idea = extensive_conscription
+			}
+		}
 		count_triggers = {
 			amount = 1 #if 1 states are owned by an enemy, burn the rest of the area
 			219 = { CONTROLLER = { has_war_with = SOV } }
@@ -1266,6 +1317,15 @@ SOV_scorched_earth_german_front_stalingrad = {
 		has_war_with = GER
 		NOT = {
 			has_country_flag = SOV_barbarossa_scorched_earth_delay #a 45 day delay at the start of the war before Soviets start doing this
+		}
+		NOT = { # please don't spend PP on blowing up your own stuff when you need it for manpower
+			has_manpower < 1000000
+			has_political_power < 200
+			OR = {
+				has_idea = volunteer_only
+				has_idea = limited_conscription
+				has_idea = extensive_conscription
+			}
 		}
 		count_triggers = {
 			amount = 1 #if 1 states are owned by an enemy, burn the rest of the area

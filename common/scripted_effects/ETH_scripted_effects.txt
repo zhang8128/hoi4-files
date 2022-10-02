@@ -616,7 +616,10 @@ ETH_set_up_african_resistance_states = {
 				# add African st ate of theirs to the array
 				every_core_state = {
 					limit = {  
-						is_on_continent = africa 
+						OR = {
+							is_on_continent = africa 
+							is_core_of = EGY
+						}	
 						has_resistance = yes
 						NOT = { # no point adding if already in there
 							is_in_array = {
