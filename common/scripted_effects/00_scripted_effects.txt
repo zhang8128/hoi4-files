@@ -3668,7 +3668,7 @@ bba_get_heavy_fighter_FRA_effect = { #creates a heavy_fighter design if necessar
 						fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_2x
 						fixed_auxiliary_weapon_slot_2 = empty
 						fixed_auxiliary_weapon_slot_3 = empty
-						engine_type_slot = engine_2_2x
+						engine_type_slot = engine_3_2x
 						special_type_slot_1 = cannon_defense_turret
 					}
 					icon = "GFX_FRA_medium_plane_1_medium"

@@ -775,6 +775,7 @@ ETH_second_italo_ethiopian_war_category = {
 		visible = {
 			has_completed_focus = ETH_rally_around_the_emperor 
 			NOT = { has_country_flag = ETH_host_confirmed_flag }
+			NOT = { has_completed_focus = ETH_the_emperor_stays }
 		}
 
 		fire_only_once = no
@@ -830,10 +831,14 @@ ETH_second_italo_ethiopian_war_category = {
 				limit = { has_tech = interwar_antitank SWE = { has_tech = interwar_antitank }  }
 				NOT = { has_decision = ETH_buy_anti_tank_guns }
 			}
+			has_global_flag = second_italo_ethiopian_war_flag
+			league_of_nations_is_active = yes 
 		}
 
 		visible = {
 			has_completed_focus = ETH_arms_purchases
+			has_global_flag = second_italo_ethiopian_war_flag
+			league_of_nations_is_active = yes 
 		}
 		days_remove = 30
 		days_re_enable = 30
@@ -875,11 +880,15 @@ ETH_second_italo_ethiopian_war_category = {
 				limit = { has_tech = interwar_antitank SWE = { has_tech = interwar_antitank } }
 				NOT = { has_decision = ETH_buy_anti_tank_guns }
 			}
+			has_global_flag = second_italo_ethiopian_war_flag
+			league_of_nations_is_active = yes 
 		}
 
 		visible = {
 			has_completed_focus = ETH_arms_purchases
 			has_tech = gw_artillery
+			has_global_flag = second_italo_ethiopian_war_flag
+			league_of_nations_is_active = yes 
 		}
 		days_remove = 30
 		days_re_enable = 30
@@ -921,11 +930,15 @@ ETH_second_italo_ethiopian_war_category = {
 				limit = { has_tech = interwar_antitank SWE = { has_tech = interwar_antitank } }
 				NOT = { has_decision = ETH_buy_anti_tank_guns }
 			}
+			has_global_flag = second_italo_ethiopian_war_flag
+			league_of_nations_is_active = yes 
 		}
 
 		visible = {
 			has_completed_focus = ETH_arms_purchases
 			has_tech = tech_support 
+			has_global_flag = second_italo_ethiopian_war_flag
+			league_of_nations_is_active = yes 
 		}
 		days_remove = 30
 		days_re_enable = 30
@@ -966,12 +979,16 @@ ETH_second_italo_ethiopian_war_category = {
 				limit = { has_tech = tech_support  }
 				NOT = { has_decision = ETH_buy_support_equipment }
 			}
+			has_global_flag = second_italo_ethiopian_war_flag
+			league_of_nations_is_active = yes 
 		}
 
 		visible = {
 			has_completed_focus = ETH_arms_purchases
 			has_tech = interwar_antitank 
 			SWE = { has_tech = interwar_antitank }
+			has_global_flag = second_italo_ethiopian_war_flag
+			league_of_nations_is_active = yes 
 		}
 		days_remove = 30
 		days_re_enable = 30

@@ -184,14 +184,23 @@ SWI_dem_usa_valid_to_buy_planes = {
 ########        COUNCIL SYSTEM         ########
 ###############################################
 
-SWI_can_be_councilor = {
-	NOT = { has_character_flag = SWI_former_confederation_president }
-	NOT = { has_character_flag = SWI_current_confederation_president }
-	NOT = { has_character_flag = SWI_ousted_councilor }
-	OR = {
-		SWI_council_not_filled = yes
-		has_character_flag = SWI_councilor
+SWI_can_be_councilor = {	
+	if = {
+		limit = {
+			NOT = { has_country_flag = SWI_elected_centralized_president }
+		}
+		NOT = { has_character_flag = SWI_former_confederation_president }
+		NOT = { has_character_flag = SWI_current_confederation_president }
+		NOT = { has_character_flag = SWI_ousted_councilor }
+		OR = {
+			SWI_council_not_filled = yes
+			has_character_flag = SWI_councilor
+		}
 	}
+	else = {
+		hidden_trigger = { always = yes }
+	}	
+
 }
 
 SWI_councilor_visible = {

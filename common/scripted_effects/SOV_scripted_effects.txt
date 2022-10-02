@@ -7655,6 +7655,13 @@ SOV_set_up_civil_war_army_fractions = {
 			}
 			set_variable = { ROOT.SOV_right_opposition_army_support = 0.2 }
 		}
+		IF = { 
+			limit = { 
+				SOV = { is_ai = yes } 
+				check_variable = { ROOT.SOV_right_opposition_army_support < 0.55 }
+			}
+			add_to_variable = { ROOT.SOV_right_opposition_army_support = 0.25 }
+		}
 		clamp_variable = {
 			var = ROOT.SOV_right_opposition_army_support
 			min = 0
@@ -7698,6 +7705,13 @@ SOV_set_up_civil_war_army_fractions = {
 				NOT = { has_variable = ROOT.SOV_left_opposition_army_support }
 			}
 			set_variable = { ROOT.SOV_left_opposition_army_support = 0.2 }
+		}
+		IF = { 
+			limit = { 
+				SOV = { is_ai = yes } 
+				check_variable = { ROOT.SOV_left_opposition_army_support < 0.55 }
+			}
+			add_to_variable = { ROOT.SOV_left_opposition_army_support = 0.25 }
 		}
 		clamp_variable = {
 			var = ROOT.SOV_left_opposition_army_support
@@ -7745,10 +7759,10 @@ SOV_set_up_civil_war_army_fractions = {
 		}
 		IF = { 
 			limit = { 
-				SOV = { is_ai = yes } 
+				SOV = { is_ai = yes }
 				check_variable = { ROOT.SOV_exiles_army_support < 0.55 }
 			}
-			add_to_variable = { ROOT.SOV_exiles_army_support = 0.15 }
+			add_to_variable = { ROOT.SOV_exiles_army_support = 0.25 }
 		}
 		clamp_variable = {
 			var = ROOT.SOV_exiles_army_support
@@ -7777,7 +7791,7 @@ SOV_set_up_civil_war_army_fractions = {
 				SOV = { is_ai = yes } 
 				check_variable = { ROOT.SOV_exiles_air_support < 0.55 }
 			}
-			add_to_variable = { ROOT.SOV_exiles_air_support = 0.15 }
+			add_to_variable = { ROOT.SOV_exiles_air_support = 0.25 }
 		}
 		clamp_variable = {
 			var = ROOT.SOV_exiles_air_support

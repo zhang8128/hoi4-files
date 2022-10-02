@@ -96,6 +96,7 @@ country_event = {
 						OR = {
 							is_major = yes
 							tag = YUG
+							original_tag = BUL
 						}
 						NOT = { tag = FROM }
 						OR = {
