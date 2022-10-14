@@ -651,6 +651,7 @@ focus_tree = {
 							puppet = PREV
 							set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
 						}
+						set_country_flag = yug_croatia_flag
 					}
 				}
 				event_target:released_nation_target = {
@@ -792,6 +793,7 @@ focus_tree = {
 							puppet = PREV
 							set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
 						}
+						set_country_flag = yug_bosnia_flag
 					}
 				}
 				event_target:released_nation_target = {
@@ -1294,6 +1296,7 @@ focus_tree = {
 								puppet = PREV
 								set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
 							}
+							set_country_flag = yug_transylvania_flag
 						}
 					}
 					event_target:released_nation_target = {
@@ -4197,7 +4200,7 @@ focus_tree = {
 			if = {
 				limit = {
 					105 = {
-						owner = {
+						controller = {
 							OR = {
 								tag = ROOT
 								is_subject_of = ROOT
@@ -4228,7 +4231,7 @@ focus_tree = {
 			if = {
 				limit = {
 					109 = {
-						owner = {
+						controller = {
 							OR = {
 								tag = ROOT
 								is_subject_of = ROOT
@@ -4596,7 +4599,7 @@ focus_tree = {
 			if = {
 				limit = {
 					853 = {
-						owner = {
+						controller = {
 							OR = {
 								tag = ROOT
 								is_subject_of = ROOT
@@ -4811,7 +4814,7 @@ focus_tree = {
 			if = {
 				limit = {
 					45 = {
-						owner = {
+						controller = {
 							OR = {
 								tag = ROOT
 								is_subject_of = ROOT
@@ -4833,7 +4836,7 @@ focus_tree = {
 			if = {
 				limit = {
 					105 = {
-						owner = {
+						controller = {
 							OR = {
 								tag = ROOT
 								is_subject_of = ROOT
@@ -4855,7 +4858,7 @@ focus_tree = {
 			if = {
 				limit = {
 					107 = {
-						owner = {
+						controller = {
 							OR = {
 								tag = ROOT
 								is_subject_of = ROOT
@@ -4877,7 +4880,7 @@ focus_tree = {
 			if = {
 				limit = {
 					108 = {
-						owner = {
+						controller = {
 							OR = {
 								tag = ROOT
 								is_subject_of = ROOT
@@ -4899,7 +4902,7 @@ focus_tree = {
 			if = {
 				limit = {
 					764 = {
-						owner = {
+						controller = {
 							OR = {
 								tag = ROOT
 								is_subject_of = ROOT
@@ -4921,7 +4924,7 @@ focus_tree = {
 			if = {
 				limit = {
 					803 = {
-						owner = {
+						controller = {
 							OR = {
 								tag = ROOT
 								is_subject_of = ROOT
@@ -5077,7 +5080,7 @@ focus_tree = {
 			if = {
 				limit = {
 					104 = {
-						owner = {
+						controller = {
 							OR = {
 								tag = ROOT
 								is_subject_of = ROOT
@@ -5105,7 +5108,7 @@ focus_tree = {
 			}
 			else = {
 				random_owned_controlled_state = {
-					prioritize = { 104 }
+					prioritize = { 104 804 }
 					limit = {									
 						free_building_slots = {
 							building = arms_factory

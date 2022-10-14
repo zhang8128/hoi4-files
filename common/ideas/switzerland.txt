@@ -131,7 +131,7 @@ ideas = {
 			picture = tfv_can_conscription_crisis
 
 			modifier = {
-					conscription_factor  = 0.25 
+					conscription_factor  = 0.15 
 			}
 		}
 
@@ -505,7 +505,7 @@ ideas = {
 				democratic_drift = 0.05
 				resistance_damage_to_garrison_on_our_occupied_states = 0.3
 				resistance_target_on_our_occupied_states = 0.25
-				conscription_factor  = 0.1
+				conscription_factor  = 0.05
 				surrender_limit = 0.1
 			}
 		}
@@ -611,7 +611,7 @@ ideas = {
 				industrial_capacity_factory = 0.05
 				production_speed_arms_factory_factor = 0.15
 				production_speed_bunker_factor = 0.2
-				max_dig_in = 0.3
+				max_dig_in_factor = 0.3
 			}
 		}
 		SWI_spirit_of_helvetia_defensive_war = {
@@ -624,7 +624,7 @@ ideas = {
 				defensive_war_stability_factor = 0.5
 				war_support_factor = 0.3
 				dig_in_speed = 0.3
-				max_dig_in = 0.4
+				max_dig_in_factor = 0.5
 				army_defence_factor = 0.25
 				conscription_factor  = 0.25
 			}
@@ -885,7 +885,7 @@ aircraft_manufacturer = {
 		available = {
 			has_completed_focus = SWI_swiss_airplane_designs
 		}
-		picture = GFX_idea_SWI_eidgenossische_FW
+		picture = SWI_eidgenossische_FW
 		
 		allowed = {
 			SWI_bba = yes
@@ -900,6 +900,10 @@ aircraft_manufacturer = {
 		traits = { light_aircraft_manufacturer }
 		
 		modifier = {
+		}
+
+		ai_will_do = {
+			base = 5
 		}
 	}
 }
@@ -924,6 +928,10 @@ materiel_manufacturer = {
 		
 		modifier = {
 		}
+
+		ai_will_do = {
+			base = 5
+		}
 	}
 	SWI_sig = {
 
@@ -940,6 +948,14 @@ materiel_manufacturer = {
 		traits = { infantry_equipment_manufacturer }
 		
 		modifier = {
+		}
+
+		ai_will_do = {
+			base = 5
+			modifier = {
+				add = 10
+				SWI_is_historical_ai = yes 
+			}
 		}
 	}
 	SWI_oerlikon = {

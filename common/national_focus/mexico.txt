@@ -393,7 +393,7 @@ focus_tree = {
 				promote_leader = yes				
 				}
 				add_country_leader_role = {
-					character = MEX_Plutarco_E_Calles
+					character = MEX_plutarco_calles
 					country_leader = {
 						expire = "1965.1.1"
 						ideology = despotism

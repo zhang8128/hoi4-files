@@ -4557,6 +4557,7 @@ country_event = {
 			}
 			GER = { transfer_state = 85 }
 			GER = { transfer_state = 807 }
+			807 = { add_core_of = GER }
 		}
 	}
 
@@ -4635,6 +4636,7 @@ country_event = {
 		}
 		transfer_state = 85
 		transfer_state = 807
+		807 = { add_core_of = GER }
 		if = {
 			limit = {
 				ENG = {

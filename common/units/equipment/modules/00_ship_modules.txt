@@ -442,7 +442,9 @@ equipment_modules = {
 		}
 
 		forbid_module_categories = {
-		    ship_light_medium_battery 
+		    ship_light_medium_battery
+		    dp_light_battery
+		    ship_light_battery  
 		}
 
 		can_convert_from = {
@@ -479,7 +481,9 @@ equipment_modules = {
 		}
 
 		forbid_module_categories = {
-		    ship_light_medium_battery 
+		    ship_light_medium_battery
+		    dp_light_battery
+		    ship_light_battery  
 		}
 
 		can_convert_from = {
@@ -516,7 +520,9 @@ equipment_modules = {
 		}
 
 		forbid_module_categories = {
-		    ship_light_medium_battery 
+		    ship_light_medium_battery
+		    dp_light_battery
+		    ship_light_battery  
 		}
 
 		can_convert_from = {
@@ -559,7 +565,9 @@ equipment_modules = {
 		}
 
 		forbid_module_categories = {
-		    ship_light_medium_battery 
+		    ship_light_medium_battery
+		    dp_light_battery
+		    ship_light_battery 
 		}
 
 		can_convert_from = {
@@ -967,7 +975,7 @@ equipment_modules = {
 		
 		add_stats = {
 			anti_air_attack = 1.5
-			build_cost_ic = 90
+			build_cost_ic = 80
 		}
 		
 		multiply_stats = {
@@ -2336,7 +2344,7 @@ equipment_modules = {
 		gfx = ship_armor_thick_1
 		
 		multiply_stats = {
-			build_cost_ic = 0.2
+			build_cost_ic = 0.125
 			naval_speed = -0.3
 			max_strength = 0.05
 
@@ -2378,7 +2386,7 @@ equipment_modules = {
 		gfx = ship_armor_thick_2
 		parent = ship_armor_bb_1
 		multiply_stats = {
-			build_cost_ic = 0.2
+			build_cost_ic = 0.15
 			naval_speed = -0.3
 			max_strength = 0.1
 		}
@@ -2421,7 +2429,7 @@ equipment_modules = {
 		gfx = ship_armor_thick_3
 		parent = ship_armor_bb_2
 		multiply_stats = {
-			build_cost_ic = 0.2
+			build_cost_ic = 0.175
 			naval_speed = -0.3
 			max_strength = 0.15
 		}

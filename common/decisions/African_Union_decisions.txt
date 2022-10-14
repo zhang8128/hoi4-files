@@ -8,12 +8,13 @@ african_union_category = {
 
 		state_target = yes
 		on_map_mode = map_and_decisions_view
-
 		target_trigger = {
 			FROM = { 
-				capital_scope = { is_on_continent = africa }
 				is_capital = yes
 				OWNER = {
+					PREV = {
+						is_core_of = PREV
+					}
 					AND = {
 						NOT = { has_idea = organization_of_african_unity_member_idea }
 						OR = { 
@@ -21,6 +22,7 @@ african_union_category = {
 							is_subject_of = ROOT
 						}
 					}
+					capital_scope = { is_on_continent = africa }
 				}
 			}
 		}

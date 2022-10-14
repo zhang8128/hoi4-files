@@ -4248,7 +4248,7 @@ not_today = {
 	happened = {
 		has_government = communism
 		has_country_leader = { ruling_only = yes character = ITA_antonio_gramsci }
-		has_cosmetic_tag = ITA_socialist_republic
+		has_completed_focus = ITA_il_sol_dell_avvenire
 	}
 }
 
