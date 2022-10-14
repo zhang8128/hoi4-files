@@ -120,6 +120,7 @@ SWI_angriest_country_still_mad = {
 			check_variable = {
 				THIS.opinion@SWI < SWI.SWI_no_longer_angry_threshold
 			}
+			SWI_is_country_to_balance = yes
 		}
 	}
 }

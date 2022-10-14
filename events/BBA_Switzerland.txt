@@ -3365,7 +3365,7 @@ country_event = { #Influencing the state succeeded
 	is_triggered_only = yes
 
 	immediate = {
-
+		add_state_claim = var:SWI.SWI_influence_target_state
 	}
 
 	option = { #good!!
@@ -3378,7 +3378,9 @@ country_event = { #Influencing the state succeeded
 		var:SWI.SWI_influence_target_state = {
 			set_state_flag = SWI_influence_succeeded
 		}
-		add_state_claim = var:SWI.SWI_influence_target_state
+		effect_tooltip = {
+			add_state_claim = var:SWI.SWI_influence_target_state
+		}
 		clear_variable = SWI_influence_target_state
 	}
 }

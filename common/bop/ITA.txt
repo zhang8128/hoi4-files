@@ -509,6 +509,7 @@ ITA_power_balance = {
 						}
 					}
 					ITA_vittorio_emanuele_iii = { promote_character = yes }
+					ITA_add_king_vittorio_emanuele_back_as_idea = yes
 				}
 			}
 			on_deactivate = {

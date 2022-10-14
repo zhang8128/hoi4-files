@@ -5331,10 +5331,11 @@ form_hre_category = {
 			# Switzerland
 			custom_trigger_tooltip = {
 				tooltip = form_country_switzerland_required_states_tt
-				controls_state = 3
-				controls_state = 151
-				controls_state = 845
-				controls_state = 847
+				controls_state = 3 #Swiss Plateau
+				controls_state = 151 #Eastern Swiss Alps
+				controls_state = 845 #Jura Mountains
+				controls_state = 847 #Western Swiss Alps
+				controls_state = 846 #Ticino
 			}
 			# Austria
 			custom_trigger_tooltip = {
@@ -5343,7 +5344,6 @@ form_hre_category = {
 				controls_state = 153
 				controls_state = 152
 				controls_state = 4
-				controls_state = 848
 			}
 			# Netherlands
 			custom_trigger_tooltip = {

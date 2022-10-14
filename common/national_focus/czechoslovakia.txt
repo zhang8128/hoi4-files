@@ -1736,6 +1736,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_political_power = 120
 			#allow nazi leader
 			every_other_country = {
 				limit = { 
@@ -2118,6 +2119,7 @@
 
 		completion_reward = {
 			 GER = { add_opinion_modifier = { target = CZE modifier = CZE_german_leanings } }
+			 add_political_power = 120
 		}
 	}
 
@@ -2858,7 +2860,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			army_experience = 10
+			army_experience = 50
 		}
 	}
 
@@ -3051,7 +3053,7 @@
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				cost_reduction = 0.5
+				cost_reduction = 1
 				uses = 1
 				category = land_doctrine
 			}
@@ -3237,7 +3239,7 @@
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
 				cost_reduction = 0.5
-				uses = 1
+				uses = 2
 				category = land_doctrine
 			}
 		}
@@ -3313,7 +3315,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			air_experience = 10
+			air_experience = 100
 		}
 	}
 
@@ -3647,7 +3649,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			navy_experience = 25
+			navy_experience = 100
 		}
 	}
 

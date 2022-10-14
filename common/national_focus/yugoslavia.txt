@@ -651,6 +651,7 @@ focus_tree = {
 							puppet = PREV
 							set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
 						}
+						set_country_flag = yug_croatia_flag
 					}
 				}
 				event_target:released_nation_target = {
@@ -792,6 +793,7 @@ focus_tree = {
 							puppet = PREV
 							set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
 						}
+						set_country_flag = yug_bosnia_flag
 					}
 				}
 				event_target:released_nation_target = {
@@ -1294,6 +1296,7 @@ focus_tree = {
 								puppet = PREV
 								set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
 							}
+							set_country_flag = yug_transylvania_flag
 						}
 					}
 					event_target:released_nation_target = {
