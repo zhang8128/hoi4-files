@@ -778,6 +778,15 @@ SOV_PROVISIONAL = {
     color_ui = rgb { 242 242 242 }
 }
 
+WGR = {
+    color = rgb { 195 236 230 } # The colors are set to be more are less what we are used to
+    color_ui = rgb { 225 255 255 }
+}
+DDR = {
+    color = rgb { 120 150 80 }
+    color_ui = rgb { 150 180 120 }
+}
+
 stalinist_soviet_union = {
 	color = rgb { 125 13 24 }
 	color_ui = rgb { 163 17 31 }

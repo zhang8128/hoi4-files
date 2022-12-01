@@ -149,6 +149,9 @@ areas = {
 			86  # Tasman Sea
 			98  # Great Australian Bight
 			81  # Coral Sea
+			194 #Easern Australia
+			84 #Gulf of Carpanteria
+			193 #Northern Australia
 		}
 	}
 	

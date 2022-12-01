@@ -1803,21 +1803,13 @@ focus_tree = {
 		}
 
 		available = {
-			all_country_with_original_tag = {
-				original_tag_to_check = FIN
+			FIN = {
+				exists = yes
 				has_government = fascism
 			}
 		}
 
 		bypass = {
-			all_country_with_original_tag = {
-				original_tag_to_check = FIN
-				OR = {
-					exists = no
-					is_subject = yes
-					has_country_flag = banned_fascism_flag
-				}
-			}
 		}
 
 		cancel_if_invalid = yes
@@ -1875,21 +1867,13 @@ focus_tree = {
 		}
 
 		available = {
-			all_country_with_original_tag = {
-				original_tag_to_check = FIN
+			FIN = {
 				has_government = fascism
+				exists = yes
 			}
 		}
 
 		bypass = {
-			all_country_with_original_tag = {
-				original_tag_to_check = FIN
-				OR = {
-					exists = no
-					is_subject = yes
-					has_country_flag = banned_fascism_flag
-				}
-			}
 		}
 
 		cancel_if_invalid = yes
