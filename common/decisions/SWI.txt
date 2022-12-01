@@ -1,4 +1,9 @@
 SWI_debug_decisions_category = {
+	SWI_find_biggest_fascist = {
+		complete_effect = {
+			SWI_find_biggest_fascist_neighbor = yes 
+		}
+	}
 	SWI_is_FRA_country_to_balance = {
 		available = {
 			FRA = { 
@@ -549,7 +554,7 @@ SWI_federal_council_decisions_category = {
 			}
 		}
 
-		cost = 50
+		cost = 65
 
 		days_remove = 90
 
@@ -567,15 +572,15 @@ SWI_federal_council_decisions_category = {
 			random_list = {
 				33 = { #Influence succeeds
 					modifier = { 
-						factor = 1.5 #Better chance if it's an Alpine State
+						factor = 1.2 #Better chance if it's an Alpine State
 						FROM = { is_alpine_state = yes }
 					}
 					modifier = {
-						factor = 1.5 #Better chance if tried once and failed. 
+						factor = 1.2 #Better chance if tried once and failed. 
 						FROM = { has_state_flag = SWI_influence_failed } 
 					}
 					modifier = {
-						factor = 1.5 #Better chance if another state has a claim by Switzerland
+						factor = 1.2 #Better chance if another state has a claim by Switzerland
 						FROM = {
 							OWNER = {
 								any_owned_state = {
@@ -1649,8 +1654,8 @@ SWI_federal_council_decisions_category = {
 		cost = SWI_president_initiative_cost
 		
 		modifier = {
-			research_speed_factor = 0.3
-			production_speed_arms_factory_factor = 0.5	
+			research_speed_factor = 0.2
+			production_speed_arms_factory_factor = 0.35	
 		}
 
 		complete_effect = {
@@ -2117,9 +2122,9 @@ SWI_centralization_power_balance_decisions = {
 			}
 			modifier = {
 				factor = 5 
-				is_power_balance_side_active = {
+				power_balance_value = {
 					id = SWI_centralization_bop
-					side = SWI_centralization_bop_council
+					value < 0
 				}	
 			}
 		}
@@ -2731,6 +2736,8 @@ SWI_absolute_neutrality_decisions_category = {
 			}
 		}
 
+		cost = 100
+
 		days_remove = 120 
 
 		modifier = {
@@ -2776,6 +2783,8 @@ SWI_absolute_neutrality_decisions_category = {
 			}
 		}
 
+		cost = 100
+
 		days_remove = 120 
 
 		modifier = {
@@ -2819,6 +2828,8 @@ SWI_absolute_neutrality_decisions_category = {
 				has_government = neutrality  
 			}
 		}
+
+		cost = 100
 
 		days_remove = 120 
 
@@ -3240,6 +3251,7 @@ SWI_absolute_neutrality_decisions_category = {
 				SWI_is_country_to_balance = yes
 				has_government = fascism 
 				NOT = {
+					has_war_with = ROOT 
 					has_dynamic_modifier = { modifier = SWI_gold_trade_with_switzerland }
 					has_dynamic_modifier = { modifier = SWI_stole_our_gold_reserves }
 				}
@@ -3287,6 +3299,7 @@ SWI_absolute_neutrality_decisions_category = {
 		
 		target_trigger = {
 			FROM = {
+				NOT = { has_war_with = ROOT } 
 				SWI_is_country_to_balance = yes
 				has_government = democratic 
 				NOT = {					

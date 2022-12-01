@@ -2923,22 +2923,29 @@ country_event = {
 
 		if = {
 			limit = {
-				OR = {
-					has_government = fascism
-					has_government = neutrality
+				NOT = {
+					is_in_faction_with = FROM
 				}
 			}
-			create_wargoal = {
-				type = annex_everything
-				target = FROM
+			if = {
+				limit = {
+					OR = {
+						has_government = fascism
+						has_government = neutrality
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = FROM
+				}
 			}
+			else = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = FROM
+				}
+			} 
 		}
-		else = {
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = FROM
-			}
-		} 
 
 		effect_tooltip = {
 			FROM = {
@@ -3395,7 +3402,12 @@ country_event = {
 		}
 
 		trigger = {
-			has_government = FROM
+			OR = {
+				has_government = FROM
+				FROM = {	
+					original_tag = ITA
+				}
+			}
 		}
 
 		set_politics = { ruling_party = FROM }
@@ -3438,20 +3450,39 @@ country_event = {
 
 		ai_chance = {
 			base = 10
+
+			modifier = {
+				factor = 0.1
+				FROM = {
+					original_tag = ITA
+					NOT = {
+						has_government = ROOT
+					}
+				}
+				is_in_faction = no
+			}
 		}
+
 
 		FROM = {
 			effect_tooltip = {
 				if = {
 					limit = {
-						OR = {
-							has_government = fascism
-							has_government = neutrality
+						NOT = {
+							is_in_faction_with = ROOT
 						}
 					}
-					create_wargoal = {
-						type = annex_everything
-						target = ROOT
+					if = {
+						limit = {
+							OR = {
+								has_government = fascism
+								has_government = neutrality
+							}
+						}
+						create_wargoal = {
+							type = annex_everything
+							target = ROOT
+						}
 					}
 				}
 				else = {

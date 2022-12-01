@@ -4962,12 +4962,12 @@ focus_tree = {
 					original_tag = HOL
 					OR = {
 						AND = {
-							owns_state = 309
+							owns_state = 309 #Suriname 
 							has_full_control_of_state = 309
 						}
 						AND = {
-							owns_state = 153
-							has_full_control_of_state = 153
+							owns_state = 695 #Curacao 
+							has_full_control_of_state = 695
 						}
 						SUR = {
 							is_subject_of = PREV

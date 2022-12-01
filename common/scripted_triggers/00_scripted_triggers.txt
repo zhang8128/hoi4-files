@@ -984,5 +984,8 @@ is_unlikely_country_tag = {
 		tag = KAR
 		tag = SIL
 		tag = KSH
+		tag = ALT
+		tag = UZB
+		tag = KHI
 	}
 }

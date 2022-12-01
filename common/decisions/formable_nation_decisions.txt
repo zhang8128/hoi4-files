@@ -1101,6 +1101,7 @@ form_ottoman_empire_category = {
 				455 = { add_core_of = ROOT }
 				183 = { add_core_of = ROOT }
 				656 = { add_core_of = ROOT }
+				907 = { add_core_of = ROOT }
 			}
 			hidden_effect = {
 				news_event = { id = wtt_news.61 hours = 6 }
@@ -1595,6 +1596,8 @@ form_ottoman_empire_category = {
 			controls_state = 858
 			controls_state = 854
 			controls_state = 859
+			controls_state = 907
+			
 		}
 
 		visible = {
@@ -1620,6 +1623,7 @@ form_ottoman_empire_category = {
 			858 = { add_core_of = ROOT }
 			854 = { add_core_of = ROOT }
 			859 = { add_core_of = ROOT }
+			907 = { add_core_of = ROOT }
 			create_wargoal = { 
 				type = annex_everything
 				target = OMA
@@ -2435,7 +2439,9 @@ form_roman_empire_category = {
 						set_character_name = {
 							name = ITA_benito_mussolini_roman_emperor
 						}
-						set_leader_portrait = "GFX_portrait_italy_emperor_mussolini"
+						set_portraits = {
+							civilian = { large = GFX_portrait_italy_emperor_mussolini }
+						}
 					}
 				}
 				#else_if = { #Skipping Balbo and Grandi for now since they have no roman emperor portraits
@@ -2466,7 +2472,9 @@ form_roman_empire_category = {
 						set_character_name = {
 							name = ITA_vittorio_emanuele_iii_roman_emperor
 						}
-						set_leader_portrait = "GFX_portrait_ITA_emperor_vittorio_emanuele_III"
+						set_portraits = {
+							civilian = { large = GFX_portrait_ITA_emperor_vittorio_emanuele_III }
+						}
 					}
 				}
 				else_if = { #Skipping Balbo and Grandi for now since they have no roman emperor portraits
@@ -2477,7 +2485,10 @@ form_roman_empire_category = {
 						set_character_name = {
 							name = ITA_prince_umberto_roman_emperor
 						}
-						set_leader_portrait = "GFX_portrait_ITA_emperor_umberto"
+
+						set_portraits = {
+							civilian = { large = GFX_portrait_ITA_emperor_umberto }
+						}
 					}
 				}
 				if = {
@@ -4187,6 +4198,8 @@ form_persian_empire_category = {
 				354 = { add_core_of = ROOT }
 				353 = { add_core_of = ROOT }
 				352 = { add_core_of = ROOT }
+				797 = { add_core_of = ROOT }
+				798 = { add_core_of = ROOT }
 			}
 			# France
 			custom_effect_tooltip = form_persia_france_coring_states_tt
@@ -4369,6 +4382,8 @@ form_byzantine_empire_category = {
 				353 = { add_core_of = ROOT }
 				352 = { add_core_of = ROOT }
 				799 = { add_core_of = ROOT }
+				797 = { add_core_of = ROOT }
+				798 = { add_core_of = ROOT }
 			}
 			# Bulgaria
 			custom_effect_tooltip = form_country_bulgaria_coring_states_tt
@@ -4911,6 +4926,7 @@ form_byzantine_empire_category = {
 			controls_state = 446
 			controls_state = 456
 			controls_state = 457
+			controls_state = 907
 		}
 
 		visible = {
@@ -4939,6 +4955,7 @@ form_byzantine_empire_category = {
 			446 = { add_core_of = ROOT }
 			456 = { add_core_of = ROOT }
 			457 = { add_core_of = ROOT }
+			907 = { add_core_of = ROOT }
 			set_global_flag = triumph_for_egypt_and_tunis
 		}
 
@@ -5044,6 +5061,7 @@ form_arabia_category = {
 				controls_state = 656
 				controls_state = 658
 				controls_state = 659
+				controls_state = 907
 			}
 		}
 
@@ -5127,6 +5145,7 @@ form_arabia_category = {
 				656 = { add_core_of = ROOT }
 				658 = { add_core_of = ROOT }
 				659 = { add_core_of = ROOT }
+				907 = { add_core_of = ROOT }
 			}
 			hidden_effect = {
 				news_event = { id = wtt_news.67 hours = 6 }
@@ -5344,6 +5363,7 @@ form_hre_category = {
 				controls_state = 153
 				controls_state = 152
 				controls_state = 4
+				controls_state = 848 #Vorarlberg
 			}
 			# Netherlands
 			custom_trigger_tooltip = {
@@ -5394,6 +5414,7 @@ form_hre_category = {
 				151 = { add_core_of = ROOT }
 				845 = { add_core_of = ROOT }
 				847 = { add_core_of = ROOT }
+				846 = { add_core_of = ROOT }
 			}
 			# Austria
 			custom_effect_tooltip = form_country_austria_coring_states_tt
@@ -6745,6 +6766,9 @@ form_macedonian_empire_category = {
 				controls_state = 354
 				controls_state = 353
 				controls_state = 352
+				controls_state = 797
+				controls_state = 798
+				controls_state = 800
 			}
 			# France: Syria
 			custom_trigger_tooltip = {
@@ -6763,6 +6787,7 @@ form_macedonian_empire_category = {
 				controls_state = 456
 				controls_state = 453
 				controls_state = 457
+				controls_state = 907
 			}
 			# Britain: Levant / Kuwait
 			custom_trigger_tooltip = {
@@ -6858,6 +6883,9 @@ form_macedonian_empire_category = {
 				354 = { add_core_of = ROOT }
 				353 = { add_core_of = ROOT }
 				352 = { add_core_of = ROOT }
+				797 = { add_core_of = ROOT }
+				798 = { add_core_of = ROOT }
+				800 = { add_core_of = ROOT }
 			}
 			# France
 			custom_effect_tooltip = form_persia_france_coring_states_tt
@@ -6889,6 +6917,7 @@ form_macedonian_empire_category = {
 				183 = { add_core_of = ROOT }
 				656 = { add_core_of = ROOT }
 				118 = { add_core_of = ROOT }
+				907 = { add_core_of = ROOT }
 			}
 			hidden_effect = {
 				set_global_flag = form_macedonian_empire_flag
@@ -8330,6 +8359,9 @@ form_siberia_category = {
 				
 				# Boyadbo
 				565 = { add_core_of = ROOT }
+
+				#Khatangsky
+				878 = { add_core_of = ROOT }
 				
 				news_event = { id = nsb_news.303 hours = 8 }
 				

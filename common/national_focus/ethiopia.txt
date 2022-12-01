@@ -150,29 +150,32 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = ETH_scavenging_tactics_idea
-			random_army_leader = {			
-				limit = {
-					NOT = {
-						has_trait = scavenger
+			custom_effect_tooltip = ETH_scavenger_random_generals_tt
+			hidden_effect = {
+				random_army_leader = {			
+					limit = {
+						NOT = {
+							has_trait = scavenger
+						}
 					}
+					add_trait = {trait = scavenger}
 				}
-				add_trait = {trait = scavenger}
-			}
-			random_army_leader = {			
-				limit = {
-					NOT = {
-						has_trait = scavenger
+				random_army_leader = {			
+					limit = {
+						NOT = {
+							has_trait = scavenger
+						}
 					}
+					add_trait = {trait = scavenger}
 				}
-				add_trait = {trait = scavenger}
-			}
-			random_army_leader = {			
-				limit = {
-					NOT = {
-						has_trait = scavenger
+				random_army_leader = {			
+					limit = {
+						NOT = {
+							has_trait = scavenger
+						}
 					}
+					add_trait = {trait = scavenger}
 				}
-				add_trait = {trait = scavenger}
 			}
 		}
 	}
@@ -7061,66 +7064,13 @@ focus_tree = {
 					country_exists = SOV
 				}
 				hidden_effect = {  
-					#create_equipment_variant = {
-					#	name = "Sevastopol-class"
-					#	type = ship_hull_heavy_1
-					#	name_group = ETH_BB_DEFAULT
-					#	parent_version = 0
-					#	modules = { 
-					#		fixed_ship_battery_slot = ship_heavy_battery_1
-					#		fixed_ship_anti_air_slot = ship_anti_air_1
-					#		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-					#		fixed_ship_radar_slot = empty
-					#		fixed_ship_engine_slot = heavy_ship_engine_1 
-					#		fixed_ship_secondaries_slot = ship_secondaries_1
-					#		fixed_ship_armor_slot = ship_armor_bb_1
-					#		front_1_custom_slot = ship_heavy_battery_1
-					#		front_2_custom_slot = empty 
-					#		mid_1_custom_slot = ship_secondaries_1
-					#		mid_2_custom_slot = ship_secondaries_1
-					#		mid_3_custom_slot = ship_secondaries_1 
-					#		rear_1_custom_slot = ship_heavy_battery_1
-					#		rear_2_custom_slot = ship_secondaries_1 
-					#	} 
-					#}
-					SOV = {
-						create_ship = {
-							type = ship_hull_heavy_1
-							equipment_variant = "Marat Class"
-							creator = SOV
-							name = "Transfer_Me"
-						}
-						transfer_ship={
-						  prefer_name = "Transfer_Me"
-						  type = battleship
-						  target = ETH
-						  exclude_refitting = no
-						}
+					create_ship = {
+						type = ship_hull_heavy_1
+						equipment_variant = "Marat Class"
+						creator = SOV
+						name = "Marat Class I"
 					}
-
 				}
-				#add_equipment_production = {
-				#	equipment = {
-				#		type = ship_hull_heavy_1
-				#		creator = "SOV" 
-				#		version_name = "Sevastopol-class"
-				#	}
-				#	name = "Addis Ababa" 
-				#	requested_factories = 1
-				#	progress = 0.8
-				#	amount = 1
-				#}
-				#add_equipment_production = {
-				#	equipment = {
-				#		type = ship_hull_heavy_1
-				#		creator = "SOV" 
-				#		version_name = "Sevastopol-class"
-				#	}
-				#	name = "Aksum" 
-				#	requested_factories = 1
-				#	progress = 0.6
-				#	amount = 1
-				#}	
 			}
 			if = {
 				limit = { not = { has_dlc = "Man the Guns" } }

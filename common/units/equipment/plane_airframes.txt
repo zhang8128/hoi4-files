@@ -158,6 +158,11 @@ equipments = {
 		}
 
 		module_count_limit = {
+			category = nav_bomber_weapon
+			count < 2
+		}
+
+		module_count_limit = {
 			category = plane_special_module_bomb_sights
 			count < 2
 		}
@@ -193,6 +198,7 @@ equipments = {
 
 	small_plane_airframe_0 = { #Inter-War
 		abbreviation = "afs0"
+		derived_variant_name = fighter_equipment_0
 		year = 1933
 
 		archetype = small_plane_airframe
@@ -210,6 +216,7 @@ equipments = {
 
 	small_plane_airframe_1 = { #Basic
 		abbreviation = "afs1"
+		derived_variant_name = fighter_equipment_1
 		year = 1936
 
 		archetype = small_plane_airframe
@@ -286,6 +293,7 @@ equipments = {
 	}
 	small_plane_airframe_2 = { #Improved
 		abbreviation = "afs2"
+		derived_variant_name = fighter_equipment_2
 		year = 1939
 
 		archetype = small_plane_airframe
@@ -389,6 +397,7 @@ equipments = {
 
 	small_plane_airframe_3 = { #Advanced
 		abbreviation = "afs3"
+		derived_variant_name = fighter_equipment_3
 		year = 1942
 
 		archetype = small_plane_airframe
@@ -499,6 +508,7 @@ equipments = {
 
 	small_plane_airframe_4 = { #modern
 		abbreviation = "afs4"
+		derived_variant_name = jet_fighter_equipment_1 # We should use "jet" for this or any of the ones below, but this is good enough for now.
 		year = 1945
 
 		archetype = small_plane_airframe
@@ -626,7 +636,7 @@ equipments = {
 		picture = archetype_fighter_equipment
 		is_buildable = no
 		type = fighter
-		#ai_type = cv_fighter
+		ai_type = cv_fighter
 		type_override = fixed_main_weapon_slot
 		allowed_types = {
 			fighter
@@ -711,6 +721,11 @@ equipments = {
 		}
 
 		module_count_limit = {
+			module = guided_anti_ship_missile
+			count < 2
+		}
+
+		module_count_limit = {
 			module = fixed_explosive_charge
 			count < 2
 		}
@@ -766,6 +781,11 @@ equipments = {
 		}
 
 		module_count_limit = {
+			category = nav_bomber_weapon
+			count < 2
+		}
+
+		module_count_limit = {
 			category = plane_special_module_bomb_sights
 			count < 2
 		}
@@ -801,6 +821,7 @@ equipments = {
 
 	cv_small_plane_airframe_0 = { #Inter-War
 		abbreviation = "afc0"
+		derived_variant_name = cv_fighter_equipment_0
 		year = 1933
 
 		archetype = cv_small_plane_airframe
@@ -818,6 +839,7 @@ equipments = {
 
 	cv_small_plane_airframe_1 = { #Basic
 		abbreviation = "afc1"
+		derived_variant_name = cv_fighter_equipment_1
 		year = 1936
 
 		archetype = cv_small_plane_airframe
@@ -893,6 +915,7 @@ equipments = {
 	}
 	cv_small_plane_airframe_2 = { #Improved
 		abbreviation = "afc2"
+		derived_variant_name = cv_fighter_equipment_2
 		year = 1939
 
 		archetype = cv_small_plane_airframe
@@ -995,6 +1018,7 @@ equipments = {
 
 	cv_small_plane_airframe_3 = { #Advanced
 		abbreviation = "afc3"
+		derived_variant_name = cv_fighter_equipment_3
 		year = 1942
 
 		archetype = cv_small_plane_airframe
@@ -1416,6 +1440,11 @@ equipments = {
 		}
 
 		module_count_limit = {
+			category = nav_bomber_weapon
+			count < 3
+		}
+
+		module_count_limit = {
 			category = plane_special_module_bomb_sights
 			count < 2
 		}
@@ -1451,6 +1480,7 @@ equipments = {
 
 	medium_plane_airframe_0 = { #Inter-War
 		abbreviation = "afm0"
+		derived_variant_name = tac_bomber_equipment_0
 		year = 1933
 
 		archetype = medium_plane_airframe
@@ -1468,6 +1498,7 @@ equipments = {
 
 	medium_plane_airframe_1 = { #Basic
 		abbreviation = "afm1"
+		derived_variant_name = tac_bomber_equipment_1
 		year = 1936
 
 		archetype = medium_plane_airframe
@@ -1594,6 +1625,7 @@ equipments = {
 
 	medium_plane_airframe_2 = { #Improved
 		abbreviation = "afm2"
+		derived_variant_name = tac_bomber_equipment_2
 		year = 1939
 
 		archetype = medium_plane_airframe
@@ -1736,6 +1768,7 @@ equipments = {
 
 	medium_plane_airframe_3 = { #Advanced
 		abbreviation = "afm3"
+		derived_variant_name = tac_bomber_equipment_3
 		year = 1942
 
 		archetype = medium_plane_airframe
@@ -1890,6 +1923,7 @@ equipments = {
 
 	medium_plane_airframe_4 = { #Modern
 		abbreviation = "afm4"
+		derived_variant_name = jet_tac_bomber_equipment_1
 		year = 1945
 
 		archetype = medium_plane_airframe
@@ -2239,6 +2273,11 @@ equipments = {
 		}
 
 		module_count_limit = {
+			category = nav_bomber_weapon
+			count < 4
+		}
+
+		module_count_limit = {
 			category = plane_special_module_bomb_sights
 			count < 2
 		}
@@ -2286,6 +2325,7 @@ equipments = {
 
 	large_plane_airframe_1 = { #Basic
 		abbreviation = "afl1"
+		derived_variant_name = strat_bomber_equipment_1
 		year = 1936
 
 		archetype = large_plane_airframe
@@ -2420,6 +2460,7 @@ equipments = {
 
 	large_plane_airframe_2 = { #Improved
 		abbreviation = "afl2"
+		derived_variant_name = strat_bomber_equipment_2
 		year = 1939
 
 		archetype = large_plane_airframe
@@ -2579,6 +2620,7 @@ equipments = {
 
 	large_plane_airframe_3 = { #Advanced
 		abbreviation = "afl3"
+		derived_variant_name = strat_bomber_equipment_3
 		year = 1942
 
 		archetype = large_plane_airframe
@@ -2738,6 +2780,7 @@ equipments = {
 
 	large_plane_airframe_4 = { #Modern
 		abbreviation = "afl4"
+		derived_variant_name = jet_strat_bomber_equipment_1
 		year = 1945
 
 		archetype = large_plane_airframe

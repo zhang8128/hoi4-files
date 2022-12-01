@@ -603,8 +603,8 @@ bookmarks = {
 			}
 			focuses = {
 				POL_complete_april_constitution
-				POL_organize_the_peasants_strike
-				POL_fulfil_fifth_of_november
+				POL_clamp_down_on_danzig
+				POL_the_between_the_seas_concept
 			}
 		}
 		"ETH"={

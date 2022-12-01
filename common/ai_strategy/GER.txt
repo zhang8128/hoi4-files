@@ -490,8 +490,15 @@ dont_die_in_mountains = {
 		is_historical_focus_on = yes
 	}
 	abort = {
-		NOT = { country_exists = FRA }
-		date > 1942.5.1
+		OR = {
+			AND = {
+				NOT = { country_exists = FRA }
+				date > 1942.5.1
+			}
+			SWI = {	
+				NOt = {has_idea = SWI_swiss_neutrality}
+			}
+		}
 	}
 
 	ai_strategy = {
@@ -1621,7 +1628,7 @@ GER_industry_we_are_the_baddies_but_not_yet = {
 		original_tag = GER
 	}
 	enable = {
-		date < 1937.8.1
+		date < 1936.8.1
 	}
 	abort={
 		date > 1937.8.1
@@ -2135,7 +2142,7 @@ GER_dont_invade_until_FRA_falls = {
 
 GER_have_some_train_production = {
 	allowed = {
-		always = no #replace if needed
+		original_tag = GER
 	}
 
 	enable = {
@@ -2145,9 +2152,9 @@ GER_have_some_train_production = {
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = equipment_production_min_factories # This does not seem to work
+		type = equipment_production_min_factories
 		id = train
-		value = 4
+		value = 3
 	}
 }
 
@@ -3002,7 +3009,12 @@ GER_avoid_war_with_SWI = {
 		}
 	}
 	abort = {
-		has_wargoal_against = SWI
+		OR = {
+			has_wargoal_against = SWI
+			SWI = {
+				NOT = { has_idea = SWI_swiss_neutrality }
+			}
+		}
 	}
 
 	ai_strategy = {
@@ -3031,25 +3043,37 @@ bba_air_prod_1 = {
 	ai_strategy = {
 		type = unit_ratio
 		id = fighter
-		value = 300
+		value = 200
 	}
 
 	ai_strategy = {
 		type = equipment_production_factor
 		id = fighter
-		value = 200
+		value = 15
 	}
 
 	ai_strategy = {
 		type = equipment_production_min_factories
 		id = fighter
-		value = 10
+		value = 6
 	}
 
 	ai_strategy = {
 		type = unit_ratio
 		id = cas
-		value = 10 #because doctrine this = 15
+		value = 25 #because doctrine this = 15
+	}
+
+ 	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = 10
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 3
 	}
 
 	ai_strategy = {
@@ -3067,31 +3091,19 @@ bba_air_prod_1 = {
 	ai_strategy = {
 		type = equipment_production_factor
 		id = tactical_bomber
-		value = 10
+		value = 5
 	}
 
 	ai_strategy = {
 		type = unit_ratio
 		id = strategic_bomber
-		value = 0
-	}
-
-	ai_strategy = {
-		type = equipment_production_factor
-		id = cas
-		value = 10
-	}
-
-	ai_strategy = {
-		type = equipment_production_min_factories
-		id = cas
-		value = 10
+		value = 1
 	}
 
 	ai_strategy = {
 		type = equipment_production_factor
 		id = strategic_bomber
-		value = 0
+		value = 1
 	}
 
 	ai_strategy = {
@@ -3103,13 +3115,13 @@ bba_air_prod_1 = {
 	ai_strategy = {
 		type = equipment_production_factor
 		id = heavy_fighter
-		value = 5
+		value = 2
 	}
 
 	ai_strategy = {
 		type = unit_ratio
 		id = heavy_fighter
-		value = 5
+		value = 2
 	}
 
 }
@@ -3129,9 +3141,33 @@ bba_air_prod_2 = {
 	}
 
 	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 25
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 8
+	}
+
+	ai_strategy = {
 		type = unit_ratio
 		id = cas
-		value = 0 #because doctrine this = 15
+		value = 25 #because doctrine this = 15
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = 15
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = cas
+		value = 3
 	}
 
 	ai_strategy = {
@@ -3143,49 +3179,60 @@ bba_air_prod_2 = {
 	ai_strategy = {
 		type = unit_ratio
 		id = tactical_bomber
-		value = -80
-	}
-
-	ai_strategy = {
-		type = unit_ratio
-		id = strategic_bomber
-		value = -60
-	}
-
-	ai_strategy = {
-		type = equipment_production_factor
-		id = fighter
-		value = 220
-	}
-
-	ai_strategy = {
-		type = equipment_production_factor
-		id = cas
-		value = 5
+		value = 15
 	}
 
 	ai_strategy = {
 		type = equipment_production_factor
 		id = tactical_bomber
-		value = -70
+		value = 5
 	}
 
 	ai_strategy = {
-		type = equipment_production_min_factories
-		id = fighter
-		value = 4
+		type = unit_ratio
+		id = strategic_bomber
+		value = 1
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = strategic_bomber
+		value = 0
+	}
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = large_plane_airframe
+		value = 0
 	}
 
 	ai_strategy = {
 		type = equipment_production_factor
 		id = heavy_fighter
-		value = -70
+		value = 3
 	}
 
 	ai_strategy = {
 		type = unit_ratio
 		id = heavy_fighter
-		value = -70
+		value = 3
 	}
 
+}
+
+GER_dont_act_on_danzig_if_things_went_south = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		has_war_with = CZE
+		date < 1940.6.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = declare_war
+		id = "POL"
+		value = -2000
+	}
 }

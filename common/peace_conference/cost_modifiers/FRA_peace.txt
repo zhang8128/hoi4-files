@@ -8,7 +8,7 @@ peace_action_modifiers = {
         peace_action_type = take_states
 
         enable = {
-            ROOT = { original_tag = FRA }
+            # ROOT = { original_tag = FRA }
             FROM = { original_tag = FRA }
             FROM.FROM = { original_tag = FRA}
             FROM.FROM.FROM = { NOT = { is_core_of = ROOT.FROM } }

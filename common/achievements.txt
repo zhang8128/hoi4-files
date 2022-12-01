@@ -991,6 +991,7 @@ miklos_horthy_and_the_habsburg_prince = {
 		152 = { is_owned_and_controlled_by = HUN }
 		153 = { is_owned_and_controlled_by = HUN }
 		4 = { is_owned_and_controlled_by = HUN }
+		848 = { is_owned_and_controlled_by = HUN } #Vorarlberg
 		69 = { is_owned_and_controlled_by = HUN }
 		9 = { is_owned_and_controlled_by = HUN }
 		75 = { is_owned_and_controlled_by = HUN }

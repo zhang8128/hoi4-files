@@ -2314,6 +2314,14 @@ characters={
 			}
 			on_add = {
 				SWI_on_add_councilors = yes
+				if = { 
+					limit = {
+						NOT = { has_character_flag = SWI_former_confederation_president }
+					}
+					custom_effect_tooltip = SWI_research_slot_tooltip
+				}
+
+
 			}
 			on_remove = {
 				SWI_on_remove_councilor = yes

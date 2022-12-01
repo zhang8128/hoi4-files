@@ -1178,10 +1178,10 @@
 				limit = {
 					has_state_flag = ROM_malaxa_IC
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -1194,14 +1194,14 @@
 					ROOT = { has_full_control_of_state = PREV } 
 					free_building_slots = {
 						building = industrial_complex
-						size > 1
+						size > 2
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = ROM_malaxa_IC
@@ -1343,10 +1343,10 @@
 				limit = {
 					has_state_flag = ROM_invest_in_the_iar_AF1
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -1359,14 +1359,14 @@
 					ROOT = { has_full_control_of_state = PREV }
 					free_building_slots = {
 						building = arms_factory
-						size > 1
+						size > 2
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = ROM_invest_in_the_iar_AF1
@@ -3029,14 +3029,48 @@
 			}
 		}
 	}
+	
+	focus = {
+		id = ROM_white_squadron_focus
+		icon = GFX_goal_generic_build_airforce
+		x = 0
+		y = 1
+		prerequisite = { focus = ROM_expand_the_air_force }
+		relative_position_id = ROM_expand_the_air_force
+		cost = 5
 
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = yes
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+			add_ideas = ROM_white_squadron
+		}
+
+		completion_reward = {
+			add_ideas = ROM_white_squadron
+		}
+	}
+	
 	focus = {
 		id = ROM_acquire_licenses
 		icon = GFX_focus_generic_license_production
 		prerequisite = { focus = ROM_expand_the_air_force }
 		mutually_exclusive = { focus = ROM_local_development }
 		x = -2
-		y = 1
+		y = 2
 		relative_position_id = ROM_expand_the_air_force
 
 		cost = 10
@@ -3092,7 +3126,7 @@
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = ROM_air_defense
-				cost_reduction = 0.25
+				cost_reduction = 0.50
 				uses = 2
 				category = cat_operational_integrity
 			}
@@ -3129,7 +3163,7 @@
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = ROM_ground_support
-				cost_reduction = 0.25
+				cost_reduction = 0.50
 				uses = 2
 				category = battlefield_support_tree
 			}
@@ -3259,7 +3293,7 @@
 		prerequisite = { focus = ROM_expand_the_air_force }
 		mutually_exclusive = { focus = ROM_acquire_licenses }
 		x = 2
-		y = 1
+		y = 2
 		relative_position_id = ROM_expand_the_air_force
 
 		cost = 10
@@ -3315,7 +3349,7 @@
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = ROM_air_superiority
-				cost_reduction = 0.25
+				cost_reduction = 0.50
 				uses = 2
 				category = strategic_destruction_tree
 			}
@@ -4116,6 +4150,10 @@
 						division = "name = \"Armored Division\" division_template = \"Armored Division\" start_experience_factor = 0.7" 
 						owner = ROM
 					}
+					create_unit = {
+						division = "name = \"Armored Division\" division_template = \"Armored Division\" start_experience_factor = 0.7" 
+						owner = ROM
+					}
 				}
 			}			
 		}
@@ -4426,7 +4464,7 @@
 			}
 		}
 	}
-
+	
 	focus = {
 		id = ROM_modern_submarines
 		icon = GFX_goal_generic_navy_submarine

@@ -184,7 +184,11 @@ ITA_missiolini_progress_in_ethiopia_success_effect = {
 		}
 		set_country_flag = ITA_missiolini_progress_in_ethiopia_one_mission_successful_flag
 	}
-	else = { #Second mission to succeed
+	else_if = { #Second mission to succeed
+		limit = {
+			NOT = { has_completed_focus = ITA_the_abyssinian_fiasco }
+			NOT = { has_completed_focus = ITA_struggle_in_ethiopia }
+		}
 		complete_national_focus = ITA_solid_progress
 	}
 }
@@ -3502,7 +3506,7 @@ ITA_manage_national_spirits_in_civil_war = {
 	set_variable = { ITA_re_modifier_army_sub_unit_militia_attack_factor = ITA.ITA_re_modifier_army_sub_unit_militia_attack_factor }
 	set_variable = { ITA_re_modifier_army_sub_unit_militia_speed_factor = ITA.ITA_re_modifier_army_sub_unit_militia_speed_factor }
 	set_variable = { ITA_re_modifier_army_sub_unit_blackshirt_assault_battalion_defence_factor = ITA.ITA_re_modifier_army_sub_unit_blackshirt_assault_battalion_defence_factor }
-	set_variable = { ITA_re_modifier_army_sub_unit_blackshirt_assault_battalion_max_org_factor = ITA.ITA_re_modifier_army_sub_unit_blackshirt_assault_battalion_max_org_factor }
+	set_variable = { ITA_re_modifier_army_sub_unit_blackshirt_assault_battalion_attack_factor = ITA.ITA_re_modifier_army_sub_unit_blackshirt_assault_battalion_attack_factor }
 	set_variable = { ITA_re_special_forces_out_of_supply_factor = ITA.ITA_re_special_forces_out_of_supply_factor }
 	set_variable = { ITA_re_conscription_factor = ITA.ITA_re_conscription_factor }
 	set_variable = { ITA_re_command_power_gain_mult = ITA.ITA_re_command_power_gain_mult }
@@ -6686,6 +6690,148 @@ ITA_replace_stuff_based_on_ideology_effect = {
 				}
 				remove_dynamic_modifier = { modifier = ITA_regia_marina_3_alt_dynamic_modifier }
 				add_dynamic_modifier = { modifier = ITA_regia_marina_3_dynamic_modifier }
+			}
+		}
+	}
+}
+
+ITA_forced_italo_ethiopian_peace_deal = {
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					ETH = {
+						any_core_state = {
+							is_controlled_by = ITA
+						}
+					}
+					ITA = {
+						any_owned_state = {
+							is_controlled_by = ETH
+						}
+					}
+				}
+				AND = {
+					ITA = { surrender_progress < 0.01 }
+					ETH = { surrender_progress < 0.01 }
+				}
+			}
+		}
+		ETH = {
+			white_peace = ITA
+		}
+	}
+	else_if = {
+		limit = {
+			ETH = {
+				all_core_state = {
+					is_controlled_by = ITA
+				}
+			}
+		}
+		ITA = {
+			start_peace_conference = {
+				tag = ETH
+				score_factor = 0.25
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ETH = { surrender_progress > 0.74 }
+		}
+		ITA = {
+			start_peace_conference = {
+				tag = ETH
+				score_factor = 0.20
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ETH = { surrender_progress > 0.49 }
+		}
+		ITA = {
+			start_peace_conference = {
+				tag = ETH
+				score_factor = 0.15
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ETH = { surrender_progress > 0.19 }
+		}
+		ITA = {
+			start_peace_conference = {
+				tag = ETH
+				score_factor = 0.1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ETH = { surrender_progress > 0 }
+		}
+		ITA = {
+			start_peace_conference = {
+				tag = ETH
+				score_factor = 0.05
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ITA = { surrender_progress > 0.74 }
+		}
+		ETH = {
+			start_peace_conference = {
+				tag = ITA
+				score_factor = 0.125
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ITA = { surrender_progress > 0.49 }
+		}
+		ETH = {
+			start_peace_conference = {
+				tag = ITA
+				score_factor = 0.1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ITA = { surrender_progress > 0.19 }
+		}
+		ETH = {
+			start_peace_conference = {
+				tag = ITA
+				score_factor = 0.075
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ITA = { surrender_progress > 0 }
+		}
+		ETH = {
+			start_peace_conference = {
+				tag = ITA
+				score_factor = 0.05
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ITA = { surrender_progress < 0.01 }
+		}
+		ETH = {
+			start_peace_conference = {
+				tag = ITA
+				score_factor = 0.025
 			}
 		}
 	}
